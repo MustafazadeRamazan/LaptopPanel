@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="~/css/site.css">
+	<title>Delete</title>
+</head>
+
+<body>
+	<a style="display: inline;" asp-controller="Laptop" asp-action="Home">Home</a>
+	<h1>Delete Laptop</h1>
+	<form asp-controller="Laptop" asp-action="Delete" method="post">
+		<label class="select" for="slct">
+			<select id="slct" name="id" asp-items="@ViewBag.Laptops"></select>
+			<svg><use xlink:href="#select-arrow-down"></use> </svg>
+		</label>
+		<svg class="sprites">
+			<symbol id="select-arrow-down" viewbox="0 0 10 6">
+				<polyline points="1 1 5 5 9 1"></polyline>
+			</symbol>
+		</svg>
+		<input type="submit" value="Delete" class="input-submit">
+	</form>
+</body>
+
+</html>

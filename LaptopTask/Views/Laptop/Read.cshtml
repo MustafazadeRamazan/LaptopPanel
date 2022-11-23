@@ -1,0 +1,34 @@
+﻿@model List<LaptopViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/table.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>Laptops</title>
+</head>
+<body>
+    <a style="display: inline;" asp-controller="Laptop" asp-action="Home">Home</a>
+    <table class="content-table">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Vendor</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Vendor</td>
+                <td>@item.Model</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

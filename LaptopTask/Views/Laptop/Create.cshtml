@@ -1,0 +1,23 @@
+﻿@model LaptopViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="~/css/site.css">
+	<title>Create</title>
+</head>
+
+<body>
+	<a style="display: inline;" asp-controller="Laptop" asp-action="Home">Home</a>
+	<h1>Create Laptop</h1>
+	<form asp-controller="Laptop" asp-action="Create" method="post">
+		<input type="text" asp-for="Id" readonly />
+		<input type="text" asp-for="Vendor" required="required" placeholder="Vendor" />
+		<input type="text" asp-for="Model" required="required" placeholder="Model" />
+		<input type="submit" value="Create" class="input-submit">
+	</form>
+</body>
+
+</html>

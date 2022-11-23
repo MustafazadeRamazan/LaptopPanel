@@ -1,0 +1,130 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background: #f1f1f1;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+	padding: 1em;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+	text-shadow: 1px 1px 0 white;
+}
+
+a {
+	text-decoration: none;
+}
+
+form, .container {
+	max-width: 600px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+form input, a {
+	border: 0;
+	outline: 0;
+	padding: 1em;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: block;
+	width: 100%;
+	margin-top: 1em;
+	font-family: 'Merriweather', sans-serif;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	resize: none;
+}
+
+form input:focus, a {
+	-moz-box-shadow: 0 0px 2px #e74c3c !important;
+	-webkit-box-shadow: 0 0px 2px #e74c3c !important;
+	box-shadow: 0 0px 2px #e74c3c !important;
+}
+
+form .input-submit, a {
+	color: white;
+	background: #1b63cf;
+	cursor: pointer;
+}
+
+form .input-submit:hover, a {
+	-moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+	-webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+	box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+
+.select {
+	position: relative;
+	min-width: 200px;
+}
+
+.select svg {
+	position: absolute;
+	right: 12px;
+	top: calc(50% - 3px);
+	width: 10px;
+	height: 6px;
+	stroke-width: 2px;
+	stroke: #9098a9;
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	pointer-events: none;
+}
+
+.select select {
+	-webkit-appearance: none;
+	padding: 7px 40px 7px 12px;
+	width: 100%;
+	border: 1px solid #e8eaed;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 1px 3px -2px #9098a9;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 16px;
+	transition: all 150ms ease;
+}
+
+.select select:required:invalid {
+	color: #5a667f;
+}
+
+.select select option {
+	color: #223254;
+}
+
+	.select select option[value=""][disabled] {
+		display: none;
+	}
+
+.select select:focus {
+	outline: none;
+	border-color: #07f;
+	box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.select select:hover + svg {
+	stroke: #07f;
+}
+
+.sprites {
+	position: absolute;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	user-select: none;
+}
